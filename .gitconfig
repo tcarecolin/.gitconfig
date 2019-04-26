@@ -8,11 +8,14 @@
 	ci = commit
 	br = branch
 	pu = pull
+        fe = fetch
+	rb = rebase
+	purr = pull --rebase
 	amend = git commit --amend –C HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  diffstat = diff --stat
-  who = shortlog -sne
-  undo = git reset --soft HEAD^
+        dif = diff --stat
+        who = shortlog -sne
+        undo = git reset --soft HEAD^
 [core]
 	excludesfile = /home/tcc/.gitignore
 	

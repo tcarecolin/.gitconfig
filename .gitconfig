@@ -1,6 +1,13 @@
 [user]
-	name = Thibaut CARE-COLIN
+	name = tcarecolin
 	email = carecolin@gmail.com
+	
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+	
 [alias]
 	st = status
 	df = diff
@@ -8,18 +15,25 @@
 	ci = commit
 	br = branch
 	pu = pull
-        fe = fetch
+    	fe = fetch
 	rb = rebase
 	purr = pull --rebase
 	amend = git commit --amend –C HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        dif = diff --stat
-        who = shortlog -sne
-        undo = git reset --soft HEAD^
+	gr = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset) %C(auto)%d%C(reset)\n         %C(black)[%cr]%C(reset)  %x09%C(bold blue)%an: %s %C(reset)'
+    	dif = diff --stat
+    	who = shortlog -sne
+    	undo = git reset --soft HEAD^
+	sub = git submodule update --recursive
+    
 [core]
 	excludesfile = /home/tcc/.gitignore
 	
 [push]
 	default = simple
+	
 [credential]
 	helper = cache --timeout=3600
+	
+[sequence]
+	editor = rebase-editor
